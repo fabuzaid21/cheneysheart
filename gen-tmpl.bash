@@ -1,1 +1,0 @@
-sed /REPLACE/`cat templates.txt`/g

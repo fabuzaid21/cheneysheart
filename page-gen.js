@@ -17,6 +17,6 @@ for(var i = 0; i < arr.length; i++){
 		pageHTML = pageHTML.replace("S-" + p, (p == page) ? "selected" : "");
 	}
 	pageHTML = pageHTML.replace("CONTENT", content);
-
+	pageHTML = pageHTML.replace("FOOTNOTE", "");
 	node_util.write(page + '.html', pageHTML);
 } 

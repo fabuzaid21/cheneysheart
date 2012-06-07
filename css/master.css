@@ -89,7 +89,7 @@ h2:first-child{
 	float:left;
 	margin-right:0px;
 	display:inline;
-	margin-bottom: 220px;
+	margin-bottom: 120px;
 	margin-top: 100px;
 	font-size: 60px;
 	letter-spacing: -1px;
@@ -104,7 +104,7 @@ h2:first-child{
 	float:left;
 	margin-right:0px;
 	display:inline;
-	margin-bottom: 10px;
+	margin-bottom: 50px;
 }
 
 #content, #footnotes{
@@ -147,6 +147,12 @@ h2:first-child{
 	font-size: 0.8em;
 }
 
+img.heart{
+	margin: auto;
+	display:block;
+	margin-top: 100px;
+	width:150px;
+}
 
 ul{
 	margin: 10px auto;
@@ -181,6 +187,28 @@ li.selected{
 }
 
 li:hover{
-	background: #CC3333;
+	background: #F82506;
 	box-shadow: 1px 1px 7px #333;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    opacity: 1.0;
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+    opacity: 0.75;
+  }
+}
+
+img.heart { 
+  -webkit-animation-name: pulse; 
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(.17,.67,.61,.46);
+  -webkit-animation-iteration-count: infinite; 
 }

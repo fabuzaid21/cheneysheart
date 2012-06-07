@@ -1,1 +1,54 @@
 <h1>Security threats and solutions</h1>
+
+<h2>Standard principles of computer security</h2>
+In general, there are three main pillars that form the underlying framework of computer security: confidentiality, integrity, and availability. For a computer system to be secure, it must provide all these three things.
+
+<h3>Confidentiality</h3>
+Many goals of secure IMD design revolve around authorization; in other words, authorization schemes are employed to provide confidentiality to the patient. The concept is simple but critical: specific sets of people can perform specific tasks. Anything else cannot be allowed. For example, patients or primary-care physicians might be granted specific access rights after properly authenticating themselves. of their personal identities. Depending on the authentication scheme implemented by the IMD, these access capabilities could potentially be delegated to other parties.
+
+A unique constraint for IMDs is that any authorization or authentication protocol must be highly sensitive to context in a medical setting. For example, an IMD might be configured to relax its authorization rules in the case of an emergency. (S. Gupta, T. Mukherjee, and K. Venkatasubramanian, “Criticality Aware Access Control Model for Pervasive Applications,” Proc. 4th Ann. IEEE Int'l Conf. Pervasive Computing and Comm. (Percom 06), IEEE CS Press, 2006, pp. 251–257.)
+
+<h3>Availability</h3>
+Another key security goal for IMD design is to ensure the IMD's availability. That is to say, any IMD should be designed such that it is impervious to an attack that renders it unusable, such as a denial-of-service (DOS) attack.
+
+More concretely, an adversary should not be able to mount a successful DoS attack against any IMD. For example, an adversary should not be able to drain a device's battery by flooding the device with network requests. An adversary also should not be able to overflow an IMD's internal memory, or jam any communications channels.
+
+For DOS attacks, there are many possible attack vectors that are at the disposal of a malicious attacker. Specifically, the attacker can mount a successful attack at three possible layers of the network: the Physical Layer, the Data Layer, and the Network Layer.
+
+For instance, an attack in the Physical Layer could potentially be the act of jamming the radio signal. In the Data Layer, an adversary could attempt to corrupt the packet frames that are sent between the device and another wireless component. And for the Network Layer, an attacker could potentially flood the network with dummy packets to increase congestion in the network and therefore limit the IMD's ability to communicate via its predetermined channels.
+
+There's also an issue of availability regarding the data which the device provides. Again, the principle here is straightforward, but difficult to achieve in practice: data should be available to appropriate entities. For example, many devices must report measured data to primary-care physicians or vital information to patients. In emergency situations, IMDs can provide useful information to medical professionals when other records might be unavailable, such as a stored diagnosis and history of treatments of the patient. (Rangaraj, Dr G V. “ICACT 2011 Half-day Tutorial on Wireless Security in Medical Devices.” HCL Technologies. India, Chennai. 24 May 2012.)
+
+<h3>Integrity</h3>
+
+Lastly, an IMD must be designed such that the integrity of the device and the integrity of its data is maintained. No adversary should be able to forge or modify the data stored on the device, nor should an attacker be able to impersonate an IMD. Therefore, all measured and stored data should be accurate, or at least accurate as the IMD can possibly be. For patient monitoring and treatment, this data not only includes measurements of vital information, but also critical metadata, such as when and where that information was collected.
+
+There's also a critical component whose integrity must also be maintained; the firmware of the device. Only authorized entities should be able to upgrade IMD firmware and applications. Such updates are often necessary because appropriately engineered updates can be the safest way to recall certain classes of IMDs that contain serious software failures. No adversary should be able to replace the firmware of an IMD with his or her own firmware, as such a capability would present a very serious security threat to the patient. (D. Halperin, T. S. Heydt-Benjamin, K. Fu, T. Kohno, and W. H. Maisel.
+Security and privacy for implantable medical devices. IEEE Pervasive
+Computing, Special Issue on Implantable Electronics, January 2008.)
+
+<h2>Solutions to security threats</h2>
+
+<h3>Public-key infrastructure</h3>
+
+Symmetric key cryptography is the bare minimum in protecting the data associated with the user. If the messages that are sent and received are not encrypted, then any person sniffing the same network can again access to this data, violating the patient's privacy as well as potentially harming the patient's life.
+
+In order to preserve data integrity (i.e. not allow people to send fake messages), a hashing code should be used (such as HMAC).
+
+Even though a data is transmitted across a secure channel and its integrity is always checked by the receiver, it's possible for a sniffer to store a transmitted packet and re-transmit it at a later point. The solution to this problem is to ensure, at the receiver's end, that the incoming data is in sequence by maintaining a sequence number. If an old packet is received from a sniffer, it is discarded due to the sequence number mismatch.
+
+The keys themselves have to be protected before they are transferred. The [Diffie-Hellman-Merkle key exchange algorithm](http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) is a proven key exchange mechanism where an intruder cannot can get access. We will not go into the details of this algorithm as it is elaborate. But it's important to note that any intrusions in between can be detected and hence, prevented.
+
+Hence, a recommended public-key infrastructure would utilize the AES-CTR algorithm for encryption, AES-CBC-MAC algorithm for data integrity and Diffie-Hellman-Merkle for key exchance. (suggested by Dr. Ranjaraj, http://www.slideshare.net/gvrangaraj/tutorial-dr-g-v-rangaraj-wireless-security-in-medical-devices).
+
+An important consideration when choosing between the various options for the cryptography algorithms is battery life, bandwidth utilization and latency requirements of the medical device onboard the patient.
+
+<h3>Addressing other denial of service attacks</h3>
+
+As long as the communication channels are reliable and secure, it is also extremely important to prevent attacks that drain batteries for example. A solution to this problem is to shift the computation to external devices, ones that are better equipped to handle larger network traffic.
+
+<h4>Magnetic interference from headphones</h4>
+
+The solution to this threat is to be very careful when handling any object that might have a magnet in it. According to this paper that researched this issue in detail, headphones should kept at leave 3 centimeters from the device. Hence, this includes not placing headphones in shirt pockets. While no adverse events have been reported at large specifically due to headphone interference with implanted medical device, due to the nature of the devices, it's important to be aware of the demonstrable (as they were in the experiments conducted in the aforementioned research) dangers.
+
+http://download.journals.elsevierhealth.com/pdfs/journals/1547-5271/PIIS1547527109007401.pdf

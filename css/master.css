@@ -237,9 +237,24 @@ img.inline{
   }
 }
 
+@-moz-keyframes pulse {
+  from {
+    -moz-transform: scale(1.0);
+    opacity: 0.75;
+  }
+  50% {
+    -moz-transform: scale(1.1);
+    opacity: 1.0;
+  }
+  to { 
+    -moz-transform: scale(1.0);
+    opacity: 0.75;
+  }
+}
+
 img.heart { 
-  -webkit-animation-name: pulse; 
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-timing-function: cubic-bezier(.17,.67,.61,.46);
-  -webkit-animation-iteration-count: infinite; 
+  -moz-animation-name: pulse; 
+  -moz-animation-duration: 1.5s;
+  -moz-animation-timing-function: cubic-bezier(.17,.67,.61,.46);
+  -moz-animation-iteration-count: infinite; 
 }

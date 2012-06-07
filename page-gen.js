@@ -11,6 +11,12 @@ for(var i = 0; i < arr.length; i++){
 	var pageHTML = read('main.html').toString();
 	//console.log(pageHTML);
 	//console.log(pageHTML.indexOf("CONTENT"));
+	
+	for(var j = 0; j < arr.length; j++){
+		var p = arr[j];
+		pageHTML = pageHTML.replace("S-" + p, (p == page) ? "selected" : "");
+	}
 	pageHTML = pageHTML.replace("CONTENT", content);
+
 	node_util.write(page + '.html', pageHTML);
 } 

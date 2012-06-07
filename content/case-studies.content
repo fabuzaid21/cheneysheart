@@ -4,12 +4,14 @@ We are fortunate that there have been no (documented) malicious attempts to hack
 <h2>Insulin Pumps</h2>
 
 In the summer of 2011, Jay Radcliffe, an Idaho-based hacker and type 1 diabetic, showed how he could hack an insulin pump made by Medtronic, one of the biggest medical device manufacturers, with just a serial number. Insulin pumps deliver insulin to diabetics who are unable to produce insulin naturally. Insulin is responsible for regulating glucose levels in the body, so a deficiency in insulin can lead to severe medical problems. Newer models of insulin pumps offer wireless communication by radio to send information about blood sugar levels to determine when and how much insulin should be administered.
-<img src="http://www.diabetespharmacist.com/uploads/image/insulin%20pump%203(2).jpg"/>
+<img class="inline" src="http://www.diabetespharmacist.com/uploads/image/insulin%20pump%203(2).jpg"/>
 
 	We can see there are several possible attacks the insulin pump can be vulnerable to:
-1)   Replay attacks, or fraudulently altering glucose readings. By forging fake glucose readings, one could cause the insulin pump to inject incorrect amounts of insulin.
-2)   The devices are configured to allow the user to disperse insulin from a remote control, so one could take control of the remote controller.
-3)   Creating an antenna and program to communicate with the device directly.
+<ol>
+	<li>Replay attacks, or fraudulently altering glucose readings. By forging fake glucose readings, one could cause the insulin pump to inject incorrect amounts of insulin.</li>
+	<li>The devices are configured to allow the user to disperse insulin from a remote control, so one could take control of the remote controller.</li>
+	<li>Creating an antenna and program to communicate with the device directly.</li>
+</ol>
 
 The third attack has the greatest potential for harm. Furthermore, the vendor of the medical device provides a Java application that can be used to configure the device wirelessly. As a testament to the infancy of this security issue, the vendor didn't even think to implement encryption between the configuration tool and device. As Radcliffe puts it: "It's like basically having root on the chemistry of your body."
 
@@ -21,7 +23,7 @@ In fact, Radcliffe even suggested ways to patch these vulnerabilities. Implement
 
 One of the most common implantable devices nowadays is the Implantable Cardioverter Defibrillator, or ICD. Each year, more than 135,000 patients receive these defibrillators to prevent sudden heart attacks. Doctors program ICDs to monitor their patient's heart condition via a program on the computer. The ICD is programmed to send the right amount of electrical shock to get the heart to beat at properly, or to send back the collected data about the patient's heart to the doctor. Much like the insulin pump's radio signal, the ICD's radio signal is unencrypted, allowing any malicious attacker to either turn off the ICD or deliver a shock to cause cardiac arrest.
 
-<img src="http://www.wired.com/images_blogs/gadgetlab/Picture%201-tm_19.jpg"/>
+<img class="inline" src="http://www.wired.com/images_blogs/gadgetlab/Picture%201-tm_19.jpg"/>
 
 
 A group of researchers from the University of Washington and University of Massachusetts took on the task of exploring the ICD as a device to hack. Using a $1,000 system made up of a software radio, GNU radio software, and other electronics, they were able to both eavesdrop on the transmitted data and control the ICD.   

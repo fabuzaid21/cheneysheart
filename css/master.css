@@ -168,7 +168,7 @@ ul{
 	padding-left: 10px;
 }
 
-li{
+li.nav{
 	list-style-type: none;
 	display:inline;
 	font-family: "Nova Square", cursive;
@@ -177,6 +177,19 @@ li{
 	margin-right: 20px;
 	float: left;
 	color: white;
+}
+
+ol{
+	list-style-type: decimal;
+	margin: 30px 0px;
+}
+
+ol li{
+	font-family: "Merriweather", serif;
+	font-size: 14px;
+	color: black;
+	list-style-type: decimal;
+	margin-bottom: 5px;
 }
 
 li a{
@@ -192,13 +205,21 @@ li a{
 	-moz-transition: all 0.5s;
 }
 
-li.selected{
-	background: #999;
+a.selected{
+	background: #777;
 }
 
 li a:hover{
 	background: #F82506;
 	box-shadow: 1px 1px 7px #333;
+}
+
+img.inline{
+	text-align: center;
+	display:block;
+	margin: 20px auto;
+	border: 1px solid #993333;
+	padding: 1px;
 }
 
 @-webkit-keyframes pulse {

@@ -22,45 +22,7 @@
 		</div>
 		<div id="content-container">
 		<div id="content">
-			<h1 class="page-header">Case Studies</h1>
-		We are fortunate that there have been no (documented) malicious attempts to hack wireless medical devices. So far, the tinkering and hacking of wireless medical devices have been contained within research laboratories and pet projects. Because this issue is so new, there are relatively few devices that have been hacked and documented. We can take a look into real case studies of how various wireless medical devices can be hacked below.
- 
-<h2>Insulin Pumps</h2>
- 
-In the summer of 2011, Jay Radcliffe, an Idaho-based hacker and type 1 diabetic, showed how he could hack an insulin pump made by Medtronic, one of the biggest medical device manufacturers, with just a serial number. Insulin pumps deliver insulin to diabetics who are unable to produce insulin naturally. Insulin is responsible for regulating glucose levels in the body, so a deficiency in insulin can lead to severe medical problems. Newer models of insulin pumps offer wireless communication by radio to send information about blood sugar levels to determine when and how much insulin should be administered.
-<img src="http://www.diabetespharmacist.com/uploads/image/insulin%20pump%203(2).jpg"/>
- 
-        	We can see there are several possible attacks the insulin pump can be vulnerable to:
-1)   Replay attacks, or fraudulently altering glucose readings. By forging fake glucose readings, one could cause the insulin pump to inject incorrect amounts of insulin.
-2)   The devices are configured to allow the user to disperse insulin from a remote control, so one could take control of the remote controller.
-3)   Creating an antenna and program to communicate with the device directly.
- 
-The third attack has the greatest potential for harm. Furthermore, the vendor of the medical device provides a Java application that can be used to configure the device wirelessly. As a testament to the infancy of this security issue, the vendor didn't even think to implement encryption between the configuration tool and device. As Radcliffe puts it: "It's like basically having root on the chemistry of your body."
- 
-        	In early 2012, another security researcher, Barnaby Jack, took what Radcliffe did to the next level.  Using a custom designed antenna, Jack can scan a radius of 300 feet to identify vulnerable pumps made by Medtronic, and then force them to dispense fatal doses of insulin. He notes the ease and low cost of recreating this antenna. Fortunately, both Radcliffe and Jack have never actually carried out these type of attacks on people and tested in home labs instead. They took the right step in showing the vulnerabilities of these systems, but not disclosing the technical specifics about them.
- 
-In fact, Radcliffe even suggested ways to patch these vulnerabilities. Implementing a verification process to approve changes to the device, for example, would solve these potentially fatal attacks. In this way, they bring attention to the problem of wireless medical device security, showing first-hand the scary consequences of the insecure systems.
- 
-<h2>Implantable Cardioverter Defibrillator</h2>
- 
-One of the most common implantable devices nowadays is the Implantable Cardioverter Defibrillator, or ICD. Each year, more than 135,000 patients receive these defibrillators to prevent sudden heart attacks. Doctors program ICDs to monitor their patient's heart condition via a program on the computer. The ICD is programmed to send the right amount of electrical shock to get the heart to beat at properly, or to send back the collected data about the patient's heart to the doctor. Much like the insulin pump's radio signal, the ICD's radio signal is unencrypted, allowing any malicious attacker to either turn off the ICD or deliver a shock to cause cardiac arrest.
- 
-<img src="http://www.wired.com/images_blogs/gadgetlab/Picture%201-tm_19.jpg"/>
- 
- 
-A group of researchers from the University of Washington and University of Massachusetts took on the task of exploring the ICD as a device to hack. Using a $1,000 system made up of a software radio, GNU radio software, and other electronics, they were able to both eavesdrop on the transmitted data and control the ICD.   
- 
-The ICD communicates wirelessly with the doctor using the 175 kHz band, which is intended for short-range communications. The team only needed two tools to intercept the radio frequency of the ICD: a recording oscilloscope and a Universal Software Radio Peripehral (USRP). The recording oscilloscope can be set to capture transmissions around 175 kHz, which easily identifies the ICD and the external module its transmitting to. Then, using the USRP the transmitted bits corresponding to either the ICD or programmer can be deciphered in Matlab. The external programmer transmissions were reverse-engineered through a spectral analysis of the programmer's RF transmission to find the modulation scheme and essentially what each symbol looked like in bits. Thus, the makeshift radio could emulate these waves to reproduce instructions to the ICD.
- 
-In addition to controlling the ICD, the groups of security researchers found intercepting patient data to be very easy. Even without semantics of the packet format of patient data being transmitted, extraction was easy as information is represented in clear text. This information transmitted in clear text includes the patient's name, birth date, medical ID number, and history. 
-
-<h2>Biosensors</h2>
-
-Implantable biosensors are a class of implantable medical devices that measure biological data, and sends it to a more powerful external device for analysis or storage. These devices range from high-data-rate imagers to low-data-rate glucose monitors. Keeping the data transferred by biosensors is important because it can be used illegally or unethically like in insurance fraud or discrimination. The data including its timestamp information is also critically important for medical care, so it should be protected from tampering. 
-	Biosensors that are fully implanted must communicate wireless to transmit through tissue. A key security security issue with these implantable sensors is that small, infrequent wireless transmissions pose greater privacy risks than large, continuous transmissions. For instance, a sensor that takes on the order of minutes to complete its task to only collect several bytes of data is an attractive target because there is a lot of information per bit that is transferred. 
-	Furthermore, there are additional security concerns with the external device itself. Eavesdropping can easily occur by imitating the external device so the sensor sends all of its data to an untrusted external device. Similarly, a rogue device can be used to upload fraudulent data to the external device. Therefore, all components involved should authenticate and encrypt. 
-	Biosensors are an important class of medical devices that present a diverse set of challenges for both security and privacy. These issues push manufacturers to explore design alternatives that offer the right trade offs between safety, security, and utility. As devices get more advanced, they are likely to have more storage, more complex signal processing, and use multiple wireless communicators, which will further complicate these issues. It is beneficial, then, to address these concerns now to gain this fundamental understanding of how the security concerns should be approached.
-		</div>
+		
 		<div id="footnotes">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</div>

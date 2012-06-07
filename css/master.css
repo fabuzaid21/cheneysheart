@@ -72,6 +72,11 @@ h2{
 	font-weight: bold;
 }
 
+a{
+	text-decoration: none;
+	color: black;
+}
+
 h2:first-child{
 	margin-top: 0px;
 }
@@ -166,17 +171,22 @@ ul{
 li{
 	list-style-type: none;
 	display:inline;
-	border:1px solid #333;
-	padding: 15px 20px;
 	font-family: "Nova Square", cursive;
 	font-size: 18px;
 	margin-left: 0px;
 	margin-right: 20px;
 	float: left;
 	color: white;
-	background: #993333;
+}
+
+li a{
+	color: white;
+	text-decoration: none;
 	border-radius: 10px;
 	box-shadow: 1px 1px 1px #000;
+	padding: 15px 20px;
+	border:1px solid #333;
+	background: #993333;
 	cursor: pointer;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -186,7 +196,7 @@ li.selected{
 	background: #999;
 }
 
-li:hover{
+li a:hover{
 	background: #F82506;
 	box-shadow: 1px 1px 7px #333;
 }

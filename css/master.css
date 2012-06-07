@@ -258,3 +258,11 @@ img.heart {
   -moz-animation-timing-function: cubic-bezier(.17,.67,.61,.46);
   -moz-animation-iteration-count: infinite; 
 }
+
+a.footnote{
+	color:#993333;
+	cursor:pointer;
+	vertical-align: super;
+	font-size: 0.8em;
+	margin-left:2px;
+}

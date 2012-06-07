@@ -1,1 +1,160 @@
 <h1>Index</h1>
+
+In July 2010, ex-Vice-President, Richard Cheney underwent surgery to be fitted
+with a left-ventricular assist device at the Ivanova Fairfax Heart and Vascular Institute to
+treat progressive congestive heart failure1. An LVAD either boosts or completely
+compensates for role of a patients ventricles providing pulsatile or continuous flow of
+blood into systemic circulation. These devices are provided to patients in end-stage
+cardiac failure who are either not suitable for transplant list or require electromechanical
+assistance to survive. One of the key features of the device is a portable external battery
+pack that connects directly to the pump in the patient by a driveline. As patients are
+already at risk for infection, stroke and bleeding, there is significant interest in reducing
+additional burden offered by power-system. Researchers at University of Washington and
+University of Pittsburgh have developed a wireless LVAD called the Free-Range
+Resonant Electrical Energy Delivery System, FREE-D, system that uses resonant
+coupling to power the pump from a receiver2. Power stations can be organized around the
+house to allow pump to work via induction, significant reducing the morbidity of disease.
+
+While it is very exciting to consider the benefits of wireless implantable medical
+technologies, the primary challenge for the growth of the industry is: How secure are
+these medical devices though?
+
+<h2>Introduction</h2>
+
+Medical devices are a fundamental part of modern healthcare, with over 1.5
+million different devices across 10,000 types of generic groups3. Over half of the medical
+devices approved by the FDA now rely on software components to function, marking a
+significant departure from primarily mechanochemical devices under the purview of the
+FDA since its inception in 1927. The Centers for Devices and Radiologic Health is the
+branch responsible for pre-market federal approval of all medical-devices from the
+simplest toothbrush to cellular phones, and microwaves to left-ventricular assist devices.
+
+The benefits of implantable devices are just as extreme as their vulnerabilities
+they potentially exploit. Imagine a hacker selecting someone at random or even an entire
+family and creating a gene specific worm that starts by infecting mobile phones which
+are generally in close proximity to people's bodies, parsing unsecured biometric data
+being broadcast from personal health and wellness sensors that includes genetic
+information to identify target and then infect and corrupting any and all implanted
+devices and sensors these individuals have in a single attack. On a completely different
+extreme, imagine the reversal of the entire obesity epidemic because of effective self and
+peer tracking. Children no longer are easily tracked and protected against smugglers and
+kidnappers, essentially bringing down the child-trafficking industry as help can be sent
+with unprecedented accuracy and precision.
+
+In order to secure the great benefits that implantable networked devices have to
+offer it is critical to address two key challenges. The first set of challenges relies in the
+reliable development of secure, robust software and firmware is familiar to medical
+information technologies described elsewhere in EMRs and diagnostic and therapeutic
+technologies. The second challenge involves the protection and security of information
+transmitted on networks including the Internet. Once a medical device has basic wireless
+
+network capability it is reasonable to assume that its security can be compromised by any
+network. In 2006 the first medical device to have wireless network capability was
+released on the market4.
+
+<h2>Basic Components of Implantable Medical Device</h2>
+
+Implantable medical devices generally consist of three major components:
+physical mechanochemical component, driving software and network component, and the
+power source component.
+
+<h3>Software/Network Component</h3>
+
+At least half of medical devices approved by the Food and Drug Administration
+now have critical functions managed by software developed and testing by individual
+manufacturers. Many of the issues concerning general software design and testing are
+pertinent to the design of implantable devices from requirements specifications to
+verification and suitable rigorous testing5.
+One of the major challenges to understanding the security vulnerabilities of
+medical devices and implantable devices in particular is the insufficient data on the
+degree to which device functions are performed by software vs. hardware, the role of
+software in ensuring the device reliability, availability and robustness. Databases that
+have been established to collect information on software flaws in medical devices are not
+only underutilized, but are not likely as effectivee as possible in collecting full spectrum
+of software problems in medical devices because manufacturers are fundamentally
+disincentivized from admitting to presence of potentially devastating flaws in their
+devices.
+Bandwidth for wireless medical devices is regulated by the Federal
+Communications Commission. The allocated bands include the standard Industrial
+Scientific, and Medical (ISM) band at 2.4 GHz which has protections against
+interference, Ultra-wide band (UWB) for short range high bandwidth communications
+though there is still concern about interference in this range, Wireless Medical Telemetry
+Services (WMTS) at 14MHz established in 2000 by FCC for biotelemetry and licensed
+special-access Medical Implant Communications Service (MICS) at 402-405 MHz
+dedicated specifically for implant data transmissions6. Implantable devices must also take
+into account the electrical properties of the body when considering their use. For example
+muscle is partly conductive and can actually absorb signal. The selection of particular
+band to transmit on is currently at discretion of the manufacturer.
+Researchers are also developing implementations for MAC protocol for wireless
+body area-networks, though the task has been challenging due to power constraints. In
+addition, IEEE 802.15 has been organized to establish standards for routing information
+on implantable devices specifically. And IEEE working group 1073 is establishing WAN
+protocols for implantable devices6.
+
+<h3>Power Source Component</h3>
+
+It is critical to consider the power supply for an implantable medical device
+through the mechanical and software design processes as thermal damage from battery,
+
+life-threatening loss of device function, device longevity, and risks of surgery and
+infection in replacing faulty devices are potentially devastating for patients. Some
+devices rely on external batteries that can be replaced, but internal units or power by
+transmission through induction are preferred to reduce burden of the device on the
+patient. Considerations must be made during software development to determine the
+minimal required information, timing of transmissions which is complicated by the ratio
+of information significance per byte transferred when frequency of transmissions is
+reduced, type of data transferred and most importantly security vulnerabilities that allow
+processes to loop infinitely creating power drain.
+
+<h2>Implantable Device Market at a Glance</h2>
+
+More than 25 million Americans currently rely on implantable medical devices to
+live. The demand for implantable medical devices is expected to growth nearly 7.7%
+annual to an incredible $52 billion by 20158, which would place the industry on par with
+the entire video game industry which is currently about $60 billion. While orthopedics
+and cardiovascular products are expected to dominate the early market for medical
+implantable devices, there is widespread interest across medical specialities to leverage
+direct access to patient on a tissue, cellular and even molecular level. These estimates do
+not include the potential non-medical, health-promoting opportunities for consumers to
+track information about their body and health through innovative sensors that may only
+be the size of a single chip containing an entire laboratory.
+
+Orthopedic implants are anticipated to retain market dominance in both value and
+opportunity for future development. Musculoskeletal disorders coupled with sports and
+exercise injuries provide large consumer base for manufacturers and practitioners.
+Implantable devices offer less invasive alternatives to current surgical treatments that will
+likely last much longer. With the integration of network access the regular maintenance
+and support of these devices will also be much easier.
+
+Wireless implantable devices also offer incredible benefits to chronic conditions
+with significant morbidity and mortality such as congestive heart failure and heart
+disease more broadly. The market for cardiovascular implants is expected to grow by
+5.1% annually to $14.6 billion by 20158. One of the key areas for cardiovascular devices
+is cardiac resynchronization therapy (CRT) which involves placement of pace-maker or
+internal defibrillator. Insulin and glucose pumps are critical for patients
+
+Medical professionals are also turning to implantable devices to treat neurological
+diseases that require modulation of electrical stimuli in the brain and other sensory
+organs. Neurostimulators already represent a suitable portion of the market. Cochlear and
+retinal implants are reversing deafness and blindness.
+
+<h2>References</h2>
+
+1. http://en.wikipedia.org/wiki/Dick_Cheney
+2. Columbia Surgery, “Cardiac Device Update:Wireless LVAD in the Pipeline”, http:/
+/www.columbiasurgery.net/2011/08/11/cardiac-device-update-wireless-lvad-in-the-
+
+pipeline/
+3. World Health Organization. http://www.who.int/mediacentre/factsheets/fs346/en/
+index.html
+4. Rubin, Avi. “All Your Devices Can Be Hacked”, TED Talk, TEDxMidAtlantic,
+October 2011
+5. Fu K. “Trustworthy Medical Device Software”. IOM Workshop on Public health
+Effectiveness of the FDA 510(k) Clearance Process, April 2011
+6. Ullah et al. “A Review of Wireless Body Area Networks for Medical Applications”
+International Journal of Communications, Network and System Sciences, Vol. 2, No.
+8, pp 797-803, 2010
+7. Halperin et al. “Security and Privacy for Implantable Medical Devices”. Pervasive
+Computing 7:1:2008
+8. Freedonia. “Implantable Medical Devices to 2015 - Demand and Sales Forecasts,
+Market Share, Market Size, Market Leaders”, March 2012
